@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrierung</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+    <header>
+      <nav class="global-nav">
+        <ul>
+          <li><a href="/Users/paulasmn/Documents/development/clothingdonation.html">Home</a></li>
+          <li><a href="/Users/paulasmn/Documents/development/service.html">Dienstleistungen</a></li>
+          <li><a href="/Users/paulasmn/Documents/development/contact.html">Kontakt</a></li>
+          <a href="/Users/paulasmn/Documents/development/clothingdonation.html"><img src="/Users/paulasmn/Documents/development/IMG_0142.jpg" width="320" height="220" alt="Logo"></a>
+          <br>
+          <li><a href="https://www.instagram.com/Clothiry"><img src="/Users/paulasmn/Documents/development/Instagram.jpg" width="100" height="75" alt="Instagram"></a></li>
+          <li><a href="https://www.facebook.com/Clothiry"><img src="/Users/paulasmn/Documents/development/Facebook.jpg" width="100" height="75" alt="Facebook"></a></li>
+          <li><a href="https://www.x.com/Clothiry"><img src="/Users/paulasmn/Documents/development/X.jpg" width="100" height="75" alt="X"></a></li>
+        </ul>
+      </nav>
+      <br>
+      <div class="cta-links">
+        <a href="/Users/paulasmn/Documents/development/register.html">Registrieren</a>
+      </div>
+    </header>
+<br>
+<br>
+    
+    <main>
+        <body>
+            <form id="donationForm">
+    
+                <h1>Registrierung für Kleiderspende</h1>
+    
+                <div class="form-group">
+                    <label for="firstname">Vorname:</label>
+                    <input type="text" id="firstname" name="name" required>
+    
+                    <label for="lastname">Nachname:</label>
+                    <input type="text" id="lastname" name="lastName" required>
+               
+                    <label for="email">E-Mail:</label>
+                    <input type="email" id="email" name="email" required>
+                
+                    <label for="phone">Telefonnummer:</label>
+                    <input type="tel" id="phone" name="phone" minlength="12" maxlength="14" required>
+                    
+                    <label for="donationType">Art der Übergabe:</label>
+                    <select id="donationType" name="donationType" required onchange="toggleFields()">
+                        <option value="">Bitte wählen</option>
+                        <option value="office">Übergabe an der Geschäftsstelle</option>
+                        <option value="pickup">Abholung</option>
+                    </select>
+    
+                <div id="pickupAddress" class="form-group" style="display:none;">
+                    <label for="address">Abholadresse:</label>
+                    <input type="text" id="address" name="address">
+    
+                    <label for="city">Stadt:</label>
+                    <input type="text" id="city" name="city">
+    
+                    <label for="postalCode">Postleitzahl:</label>
+                    <input type="text" id="postalCode" name="postalCode">
+        
+                </div>
+    
+                <div class="form-group">
+                    <label for="clothingType">Art der Kleidung:</label>
+                    <input type="text" id="clothingType" name="clothingType" required>
+                </div>
+    
+                    <label for="crisisArea">Aktuelles Krisengebiet:</label>
+                    <select id="crisisArea" name="crisisArea" required>
+                        <option value="">Bitte wählen</option>
+                        <option value="Kongo">Kongo</option>
+                        <option value="Äthiopien">Äthiopien</option>
+                        <option value="Niger">Niger</option>
+                        <option value="Somalia">Somalia</option>
+                        <option value="Mali">Mali</option>
+                        <option value="Myanmar">Myanmar</option>
+                        <option value="Burjina Faso">Burkina Faso</option>
+                        <option value="Südsudan">Südsudan</option>
+                        <option value="Gaza">Gaza</option>
+                        <option value="Sudan">Sudan</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <button type="submit">Spende senden</button>
+                </div>
+            </form>
+    
+            <div id="confirmation" class="hidden"></div>
+        </div>
+        </main>
+        
+    </body>
+
+
+<br>
+<br>
+<br>
+<footer>
+    <nav>
+      <ul>
+        <br>
+
+        <a href="impressum.html">Impressum</a> |
+        <a href="dataprotection.html">Datenschutz</a>
+      </ul>
+    </nav>
+  </footer>
+  </html>
+
+
+
+
+<style type="text/css">
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 5px;
+}
+
+body {
+font-family: Arial, sans-serif;
+margin: 0;
+padding: 0px;
+text-align: center;  
+float: left; 
+overflow-x: hidden;
+}
+
+header {
+text-align: center;
+font-size: larger;
+display: flex;
+align-items: center;
+padding: 10px 200px;
+background-color: #ffff;
+border-bottom: 1px solid #ccc; 
+box-shadow: 20 2px 1px rgba(0, 0, 0, 0.1); 
+width: 100%;
+position: sticky;
+top: 0;
+margin-left: 30px;
+z-index: 1000;
+}
+
+body img {
+  align-items: flex-start;
+}
+
+header img {
+max-height: 400px;
+align-items: center;
+}
+
+.global-nav ul {
+list-style-type: none;
+margin: 0;
+padding: 0;
+display: flex;
+align-items: center;
+}
+
+.global-nav ul li {
+margin: 0 10px;
+}
+
+.global-nav ul li a {
+text-decoration: none;
+color: #000;
+}
+
+.global-nav ul li a:hover {
+text-decoration: underline;
+}
+
+.global-nav ul li a img {
+width: 50px;
+height: 50px;
+display: inline-block;
+}
+
+.cta-links {
+margin-top: 10px;
+}
+
+.cta-links a {
+text-decoration: none;
+color: #000;
+}
+
+.cta-links a:hover {
+text-decoration: underline;
+}
+
+main {
+    margin-top: 20px;
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: white;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    width: 100;
+    text-align: left;
+    
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea,
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    text-align: left;
+    margin-bottom: 10px; 
+    margin-top: 5px;
+    display: block;
+    resize: vertical;
+    
+}
+
+
+
+form button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #ef2b56;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+form button:hover {
+    background-color: #f55e6d;
+}
+
+footer {
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #ffff;
+    color: rgb(3, 57, 252);
+    text-align: center;
+}
+
+footer :visited {
+    color: rgb(3, 57, 252); 
+    text-decoration: none; 
+}
+
+footer :active {
+    color: rgb(3, 57, 252); 
+    text-decoration: none; 
+}
+
+ 
+@media screen and (min-width: 1024px) { 
+  .global-nav ul {
+        flex-direction: row;
+        align-items: center;
+      }
+}
+
+@media screen and (min-width: 768px) and (max-width:1023px) {
+    .global-nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    form {
+        width: 100%;
+    }
+
+    .social-icons img {
+        width: 32px;
+        height: 32px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    main {display: block;}
+    main nav, main div#content {width: 100%}
+}
+
+
+</style>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const form = document.querySelector("form");
+        const donationType = document.getElementById("donationType");
+        const pickupAddress = document.getElementById("pickupAddress");
+        const zipCode = document.getElementById("postalCode");
+
+
+        donationType.addEventListener("change", function() {
+            if (this.value === "pickup") {
+                pickupAddress.style.display = "block";
+            } else {
+                pickupAddress.style.display = "none";
+            }
+        });
+    
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+    
+            const formData = new FormData(form);
+            const donationData = Object.fromEntries(formData);
+    
+            if (donationData.donationType === "pickup") {
+                const officeZipCode = "02977"; 
+                if (donationData.postalCode.substring(0, 2) !== officeZipCode.substring(0, 2)) {
+                    alert("Die Abholadresse muss in der Nähe der Geschäftsstelle liegen.");
+                    return;
+                }
+            }
+    
+       
+            const now = new Date();
+            donationData.date = now.toLocaleDateString();
+            donationData.time = now.toLocaleTimeString();
+    
+            
+            showConfirmation(donationData);
+        });
+    
+        function showConfirmation(data) {
+            
+            const confirmationHTML = `
+                <h2>Registrierung erfolgreich</h2>
+                <br> 
+                <p>Vielen Dank für Ihre Kleiderspende!</p>
+                <br>
+                <h3>Ihre Angaben:</h3>
+                <ul>
+                    <li>Vorname: ${data.name}</li>
+                    <li>Nachname: ${data.lastName}</li>
+                    <li>E-Mail: ${data.email}</li>
+                    <li>Telefonnummer: ${data.phone}</li>
+                    <li>Art der Übergabe: ${data.donationType}</li>
+                    ${data.donationType === 'pickup' ? `<li>Abholadresse: ${data.address}, ${data.city}, ${data.postalCode}</li>` : ''}
+                    <li>Art der Kleidung: ${data.clothingType}</li>
+                    <li>Krisengebiet: ${data.crisisArea}</li>
+                    <li>Datum: ${data.date}</li>
+                    <li>Uhrzeit: ${data.time}</li>
+                </ul>
+            `;
+    
+            
+            document.querySelector("main").innerHTML = confirmationHTML;
+        }
+    });
+    
+    </script>
