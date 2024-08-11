@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+    <header>
+      <nav class="global-nav">
+        <ul>
+          <li><a href="/Users/paulasmn/Documents/development/clothingdonation.html">Home</a></li>
+          <li><a href="/Users/paulasmn/Documents/development/service.html">Dienstleistungen</a></li>
+          <li><a href="/Users/paulasmn/Documents/development/contact.html">Kontakt</a></li>
+          <a href="/Users/paulasmn/Documents/development/clothingdonation.html"><img src="/Users/paulasmn/Documents/development/IMG_0142.jpg" width="320" height="220" alt="Logo"></a>
+          <br>
+          <li><a href="https://www.instagram.com/Clothiry"><img src="/Users/paulasmn/Documents/development/Instagram.jpg" width="100" height="75" alt="Instagram"></a></li>
+          <li><a href="https://www.facebook.com/Clothiry"><img src="/Users/paulasmn/Documents/development/Facebook.jpg" width="100" height="75" alt="Facebook"></a></li>
+          <li><a href="https://www.x.com/Clothiry"><img src="/Users/paulasmn/Documents/development/X.jpg" width="100" height="75" alt="X"></a></li>
+        </ul>
+      </nav>
+      <br>
+      <div class="cta-links">
+        <a href="/Users/paulasmn/Documents/development/register.html">Registrieren</a>
+      </div>
+    </header>
+<br>
+<br>
+
+<body>
+    <h1>Kontaktieren Sie uns </h1>
+    <div class="contact-form-container">
+        <form class="contact-form" id="contactForm" action="submit_form.php" method="post">
+            <h2>Kontaktformular</h2>
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" minlength="1" maxlength="30" required>
+                <label for="email">E-Mail:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="subject">Betreff:</label>
+                <input type="text" id="subject" name="subject" minlength="5" maxlength="30" required>
+                <label for="message">Nachricht:</label>
+                <textarea id="message" name="message" rows="10" maxlength="500" required></textarea>
+            <div class="form-group">
+                <button type="submit">Absenden</button>
+            </div>
+        </form>
+    </div>
+</body>
+<br>
+<br>
+<br>
+<br>
+<footer>
+    <nav>
+      <ul>
+        <a href="impressum.html">Impressum</a> |
+        <a href="dataprotection.html">Datenschutz</a>
+      </ul>
+    </nav>
+  </footer>
+  </html>
+
+<style type="text/css">
+
+ * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 5px;
+}
+        
+body {
+font-family: Arial, sans-serif;
+margin: 0;
+padding: 0px;
+text-align: center;  
+float: left; 
+overflow-x: hidden;
+}
+    
+header {
+text-align: center;
+font-size: larger;
+display: flex;
+align-items: center;
+padding: 10px 200px;
+background-color: #ffff;
+border-bottom: 1px solid #ccc; 
+box-shadow: 20 2px 1px rgba(0, 0, 0, 0.1); 
+width: 100%;
+position: sticky;
+top: 0;
+margin-left: 30px;
+z-index: 1000;
+}
+
+body img {
+  align-items: flex-start;
+}
+
+.global-nav ul {
+list-style-type: none;
+margin: 0;
+padding: 0;
+display: flex;
+align-items: center;
+}
+    
+.global-nav ul li {
+margin: 0 10px;
+}
+    
+.global-nav ul li a {
+text-decoration: none;
+color: #000;
+}
+    
+.global-nav ul li a:hover {
+text-decoration: underline;
+ }
+    
+.global-nav ul li a img {
+width: 50px;
+height: 50px;
+display: inline-block;
+    }
+    
+.cta-links {
+margin-top: 10px;
+}
+    
+.cta-links a {
+text-decoration: none;
+color: #000;
+ }
+    
+.cta-links a:hover {
+text-decoration: underline;
+}
+    
+main {
+ margin-top: 20px;
+ }
+    
+h1{
+font-size: 1.5em;
+margin-bottom: 20px;
+text-align: center;
+color:rgb(0, 0, 0)
+  }
+    
+form {
+display: flex;
+flex-direction: column;
+align-items: center;
+max-width: 400px;
+margin: 0 auto;
+padding: 20px;
+border: 1px solid #ccc;
+border-radius: 5px;
+background-color: #ffffff;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="subject"],
+textarea,
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    text-align: left;
+    margin-bottom: 10px; 
+    margin-top: 5px;
+    display: block;
+    resize: vertical;
+    
+}
+
+form label {
+margin-top: 5px;
+text-align: left;
+width: 100%;
+font-size: larger;
+font-weight:200;
+font-family: monospace 
+}                
+        
+form input {        
+padding: 10px;        
+width: calc(100% - 22px); 
+margin-top: 5px;        
+border: 1px solid #ea60a7;        
+border-radius: 5px;        
+}                
+        
+form button {        
+margin-top: 20px;        
+padding: 10px 20px;        
+background-color: #ef2b56;        
+color: white;        
+border: none;        
+border-radius: 5px;        
+cursor: pointer;        
+font-size: 1em;        
+ }       
+        
+form button:hover {
+background-color: #f55e6d;
+}
+    
+.social-icons {
+display: flex;
+justify-content: center;
+gap: 20px;
+}
+    
+.social-icons a {
+display: inline-block;
+}
+    
+.social-icons img {
+width: 40px;
+height: 40px;
+ }
+
+.contact-form-container {
+padding: 40px;
+border-radius: 8px;
+max-width: 1000px;
+width: 100%;
+align-items: center;
+text-align: center;
+margin: 0 auto; 
+}
+
+.contact-form h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    line-height:1; 
+}
+
+.form-group button {
+    background-color:#f02525;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.form-group button:hover {
+    background-color:#f55e6d;
+}
+
+
+footer {
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #ffff;
+    color:rgb(3, 57, 252);
+
+}
+
+footer :visited {color: rgb(3, 57, 252); 
+            text-decoration: none; 
+
+}
+
+footer :active {color: rgb(3, 57, 252); 
+            text-decoration: none; 
+
+}
+
+@media screen and (min-width: 1024px) {
+  .global-nav ul {
+        flex-direction: row;
+        align-items: center;
+      }
+    }
+
+@media screen and (min-width: 768px) and (max-width:1023px) {
+    .global-nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    form {
+        width: 100%;
+    }
+
+    .social-icons img {
+        width: 32px;
+        height: 32px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    main {display: block;}
+    main nav, main div#content {width: 100%}
+}
+
+</style>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const contactForm = document.getElementById('contactForm');
+
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            // Hier würde normalerweise der API-Aufruf zur Übermittlung der Daten erfolgen
+
+            // Die Übermittlung wird hier Simuliert
+            const isSuccessful = true; //Um diesen Befehl zu testen, wird true auf false gesetzt 
+
+            if (isSuccessful) {
+                alert('Ihre Nachricht wurde erfolgreich übermittelt.');
+            } else {
+                alert('Es gab ein Problem bei der Übermittlung Ihrer Nachricht. Bitte versuchen Sie es später erneut.');
+            }
+        });
+    });
+</script>
